@@ -1,3 +1,0 @@
-//
-kode
-HelloOOP.java
