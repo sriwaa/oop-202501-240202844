@@ -1,6 +1,5 @@
 package com.upb.agripos;
 
-// Paradigma OOP: buat class dan objek
 class Person {
     String nama;
     String nim;
