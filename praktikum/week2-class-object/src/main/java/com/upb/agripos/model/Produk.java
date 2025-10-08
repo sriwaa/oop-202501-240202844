@@ -1,4 +1,4 @@
-package com.upb.agripos;
+package com.upb.agripos.model;
 
 public class Produk {
     private String kode;
@@ -27,13 +27,15 @@ public class Produk {
 
     public void tambahStok(int jumlah) {
         stok += jumlah;
+        System.out.println("Berhasil menambah stok " + jumlah + " unit. Stok sekarang: " + stok);
     }
 
     public void kurangiStok(int jumlah) {
         if (stok >= jumlah) {
             stok -= jumlah;
+            System.out.println("Berhasil mengurangi stok " + jumlah + " unit. Stok sekarang: " + stok);
         } else {
-            System.out.println("Stok tidak cukup!");
+            System.out.println("Stok tidak cukup! Tidak bisa mengurangi " + jumlah + " unit.");
         }
     }
 
