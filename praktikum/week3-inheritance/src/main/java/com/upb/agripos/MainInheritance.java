@@ -6,9 +6,9 @@ import com.upb.agripos.util.CreditBy;
 public class MainInheritance {
     public static void main(String[] args) {
 
-        Benih b = new Benih("BNH-001", "Benih Stroberi AW55", 80000.0, 100, "AW55");
-        Pupuk p = new Pupuk("PPK-101", "Pupuk Hayati 25kg", 90000.0, 50, "Hayati");
-        AlatPertanian a = new AlatPertanian("ALT-501", "Sekop Tangan", 50000.0, 75, "Baja");
+        Benih b = new Benih("WWA-002", "Benih Strobewryy AW55", 80000.0, 100, "AW55");
+        Pupuk p = new Pupuk("SSR-005", "Pupuk Hayati 25kg", 90000.0, 50, "Hayati");
+        AlatPertanian a = new AlatPertanian("SRW-025", "Sekop Tangan", 50000.0, 75, "Baja");
 
         System.out.println("=== Data Produk Pertanian ===");
         b.deskripsi();
