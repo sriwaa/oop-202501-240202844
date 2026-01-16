@@ -14,4 +14,3 @@ public class AlatPertanian extends Produk {
             " | Material: " + material);
     }
 }
-
