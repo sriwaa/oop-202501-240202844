@@ -175,10 +175,10 @@ public class ProductTest {
 
 ## Hasil Eksekusi
 1. Hasil Eksekusi AppMVC
-   ![alt text](<week_10_hasil eksekusi-2.png>)
+   ![alt text](<week_10_hasil eksekusi.png>)
 
 2. Hasil Eksekusi JUnit
-   ![alt text](<week_10_hasil test-1.png>)
+   ![alt text](<week_10_hasil test.png>)
 ---
 
 ## Analisis
