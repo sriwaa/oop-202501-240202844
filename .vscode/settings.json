@@ -1,0 +1,11 @@
+{
+  "java.test.config": {
+    "vmArgs": [
+      "-ea"
+    ]
+  },
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\sri61\\Downloads\\junit-platform-console-standalone.jar"
+  ]
+}
