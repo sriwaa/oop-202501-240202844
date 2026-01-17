@@ -1,73 +1,99 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 13
+Topik: GUI Lanjutan JavaFX (TableView dan Lambda Expression)
 
 ## Identitas
-- Nama  : [Nama Mahasiswa]
-- NIM   : [NIM Mahasiswa]
-- Kelas : [Kelas]
+- Nama  : [SRI WAHYUNINGSIH]
+- NIM   : [240202844]
+- Kelas : [3IKRA]
 
 ---
 
 ## Tujuan
-(Tuliskan tujuan praktikum minggu ini.  
-Contoh: *Mahasiswa memahami konsep class dan object serta dapat membuat class Produk dengan enkapsulasi.*)
+1. Mengimplementasikan TableView<Product> untuk menampilkan data terstruktur dari database.
+2. Mengintegrasikan ObservableList dengan ProductDAO melalui ProductService.
+3. Menerapkan Lambda Expression untuk menyederhanakan event handling pada tombol Hapus dan Tambah.
+4. Menjamin traceability antara desain UML (Bab 6) dengan implementasi kode GUI.
 
 ---
 
 ## Dasar Teori
-(Tuliskan ringkasan teori singkat (3–5 poin) yang mendasari praktikum.  
-Contoh:  
-1. Class adalah blueprint dari objek.  
-2. Object adalah instansiasi dari class.  
-3. Enkapsulasi digunakan untuk menyembunyikan data.)
+1. TableView: Komponen JavaFX yang digunakan untuk menampilkan data dalam bentuk baris dan kolom. Menggunakan CellValueFactory untuk menghubungkan properti objek dengan kolom.
+2. Lambda Expression: Fitur Java 8+ yang memungkinkan penulisan fungsi anonim secara ringkas, sangat efektif untuk event handling seperti setOnAction(e -> { ... }).
+3. ObservableList: Koleksi khusus JavaFX yang secara otomatis memberitahu UI jika ada perubahan data (tambah/hapus), sehingga TableView otomatis terbarui.
 
 ---
 
 ## Langkah Praktikum
-(Tuliskan Langkah-langkah dalam prakrikum, contoh:
-1. Langkah-langkah yang dilakukan (setup, coding, run).  
-2. File/kode yang dibuat.  
-3. Commit message yang digunakan.)
+1. Refactoring View: Mengubah ProductFormView agar menggunakan TableView<Product> sebagai pengganti ListView.
+2. Setup Kolom: Mendefinisikan kolom Kode, Nama, Harga, dan Stok di dalam ProductTableView.
+3. Update Controller: Menggunakan Lambda Expression pada btnDelete untuk mengambil item terpilih (getSelectionModel().getSelectedItem()).
+4. Binding Data: Membuat metode loadData() yang mengambil List<Product> dari ProductService.findAll() dan memasukkannya ke dalam ObservableList.
+5. Uji Coba CRUD: Menjalankan aplikasi untuk memastikan data yang dihapus di UI juga terhapus di database PostgreSQL.
 
 ---
 
 ## Kode Program
-(Tuliskan kode utama yang dibuat, contoh:  
+Kode Program Utama yang Digunakan
+package com.upb.agripos.view;
 
-```java
-// Contoh
-Produk p1 = new Produk("BNH-001", "Benih Padi", 25000, 100);
-System.out.println(p1.getNama());
-```
-)
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
+
+import com.upb.agripos.model.Product;
+
+public class ProductTableView extends VBox {
+
+    public TableView<Product> table = new TableView<>();
+    public Button btnAdd = new Button("Tambah Produk");
+    public Button btnDelete = new Button("Hapus Produk");
+
+    public ProductTableView() {
+
+        TableColumn<Product, String> colCode = new TableColumn<>("Kode");
+        colCode.setCellValueFactory(new PropertyValueFactory<>("code"));
+
+        TableColumn<Product, String> colName = new TableColumn<>("Nama");
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        TableColumn<Product, Double> colPrice = new TableColumn<>("Harga");
+        colPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+
+        TableColumn<Product, Integer> colStock = new TableColumn<>("Stok");
+        colStock.setCellValueFactory(new PropertyValueFactory<>("stock"));
+
+        table.getColumns().addAll(colCode, colName, colPrice, colStock);
+
+        setSpacing(10);
+        getChildren().addAll(table, btnAdd, btnDelete);
+    }
+}
+
+
 ---
 
 ## Hasil Eksekusi
-(Sertakan screenshot hasil eksekusi program.  
-![Screenshot hasil](screenshots/hasil.png)
-)
+1. Hasil Eksekusi awal
+![alt text](<week13_hasil eksekusi.png>)
+
+2. Hasil Eksekusi (jika hapus barang)
+![alt text](<week13_hasil eksekusi 2.png>)
+
 ---
 
 ## Analisis
-(
-- Jelaskan bagaimana kode berjalan.  
-- Apa perbedaan pendekatan minggu ini dibanding minggu sebelumnya.  
-- Kendala yang dihadapi dan cara mengatasinya.  
-)
+1. Efisiensi Kode: Penggunaan Lambda Expression memangkas kode boilerplate (seperti new EventHandler...) sehingga ProductController lebih mudah dibaca.
+2. Interaktivitas: TableView memberikan pengalaman user yang lebih baik karena data terbagi per kolom dan mendukung pemilihan item (selection model) untuk proses penghapusan.
+3. Konsistensi: Nama metode findAll dan delete tetap konsisten dengan yang didefinisikan pada Bab 6 dan praktikum JDBC sebelumnya.
+
+![alt text](tabel.png)
+
 ---
 
 ## Kesimpulan
-(Tuliskan kesimpulan dari praktikum minggu ini.  
-Contoh: *Dengan menggunakan class dan object, program menjadi lebih terstruktur dan mudah dikembangkan.*)
+Praktikum Minggu 13 berhasil mengintegrasikan seluruh layer aplikasi Agri-POS. Dengan TableView, data produk tertata rapi. Penggunaan pola MVC dan SOLID memastikan aplikasi ini siap untuk tahap integrasi akhir (UAS).
 
 ---
 
-## Quiz
-(1. [Tuliskan kembali pertanyaan 1 dari panduan]  
-   **Jawaban:** …  
-
-2. [Tuliskan kembali pertanyaan 2 dari panduan]  
-   **Jawaban:** …  
-
-3. [Tuliskan kembali pertanyaan 3 dari panduan]  
-   **Jawaban:** …  )
