@@ -5,7 +5,11 @@
     ]
   },
   "java.project.referencedLibraries": [
-    "lib/**/*.jar",
+    "lib\\postgresql-42.7.9.jar",
+    "c:\\Users\\sri61\\OneDrive\\Documents\\oop-pos-240202844\\lib\\postgresql-42.7.9.jar",
     "c:\\Users\\sri61\\Downloads\\junit-platform-console-standalone.jar"
+  ],
+  "java.project.sourcePaths": [
+    "praktikum\\week11-dao-database\\src\\main\\java"
   ]
 }

@@ -1,5 +1,5 @@
-# Laporan Praktikum Minggu 1 (sesuaikan minggu ke berapa?)
-Topik: [Tuliskan judul topik, misalnya "Class dan Object"]
+# Laporan Praktikum Minggu 10
+Topik: Design Pattern (Singleton, MVC) dan Unit Testing menggunakan JUnit
 
 ## Identitas
 - Nama  : [Sri Wahyuningsih]
