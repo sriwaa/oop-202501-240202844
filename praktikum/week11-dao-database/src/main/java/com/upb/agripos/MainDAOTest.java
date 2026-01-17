@@ -13,7 +13,6 @@ public class MainDAOTest {
 
         Class.forName("org.postgresql.Driver");
 
-        // Membuka koneksi ke database agripos
         Connection conn = DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/agripos",
                 "postgres",

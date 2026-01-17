@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AppJavaFX",
+            "request": "launch",
+            "mainClass": "AppJavaFX",
+            "projectName": "oop-pos-240202844_6aacac03"
+        },
+        {
+            "type": "java",
             "name": "MainDAOTest",
             "request": "launch",
             "mainClass": "com.upb.agripos.MainDAOTest",
