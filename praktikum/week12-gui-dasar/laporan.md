@@ -92,10 +92,7 @@ public class AppJavaFX extends Application {
 ## Analisis
 Aplikasi ini sudah mengikuti arsitektur MVC. Pendekatan minggu ini jauh lebih interaktif dibanding minggu lalu yang hanya menggunakan terminal (CLI).
 
-Artefak Bab 6	Referensi	Handler GUI	Controller/Service	DAO	Dampak UI/DB
-Use Case	UC-01 Tambah Produk	Tombol Tambah	ProductController.add()	ProductDAO.insert()	UI list bertambah + DB insert
-Activity	AD-01 Tambah Produk	Tombol Tambah	Ambil input → Validasi	ProductService.insert()	Data tersimpan permanen
-Sequence	SD-01 Tambah Produk	setOnAction	View → Controller → Service	DAO → DB	Urutan panggilan sesuai SD Bab 6
+![alt text](image.png)
 
 Kendala: Terjadi error "Package mismatch" dan library JavaFX tidak terbaca. Solusi: Memperbaiki struktur folder sesuai standar Maven (src/main/java/...) dan menambahkan dependency JavaFX di pom.xml.
 

@@ -8,6 +8,13 @@
             "type": "java",
             "name": "AppJavaFX",
             "request": "launch",
+            "mainClass": "com.upb.agripos.AppJavaFX",
+            "projectName": "agripos-gui"
+        },
+        {
+            "type": "java",
+            "name": "AppJavaFX",
+            "request": "launch",
             "mainClass": "AppJavaFX",
             "projectName": "oop-pos-240202844_6aacac03"
         },

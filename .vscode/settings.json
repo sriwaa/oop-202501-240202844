@@ -9,7 +9,7 @@
     "c:\\Users\\sri61\\Downloads\\junit-platform-console-standalone.jar"
   ],
   "java.project.sourcePaths": [
-    "praktikum\\week11-dao-database\\src\\main\\java",
-    "praktikum\\week12-gui-dasar\\src\\main\\java\\com\\upb\\agripos"
+    "praktikum/week14-integrasi-individu/src/main",
+    "praktikum/week14-integrasi-individu/src/test"
   ]
 }
