@@ -48,7 +48,7 @@ Database **PostgreSQL** terdiri dari 4 tabel utama. Akses data dilakukan via `Pr
 * `members`: Member_ID (PK), Name, Poin.
 * `transactions`: ID, Date, Total, Payment_Method.
 
-![ERD Database](c:\Users\sri61\Downloads\erd_database.jpeg)
+![ERD Database](dilampirkan di folder screenshot)
 
 ---
 
@@ -57,13 +57,13 @@ Pemetaan antara Kebutuhan Fungsional (FR) dengan Implementasi Kode dan Bukti Fit
 
 | Artefak | Referensi FR | Implementasi (Kelas/Metode) | Bukti (Screenshot) |
 | :--- | :--- | :--- | :--- |
-| **FR** | **FR-1 Manajemen Produk** | `ProductController` / `SqlProductRepository.save()` | ![CRUD](c:\Users\sri61\Downloads\CRUD.jpeg) |
-| **FR** | **FR-2 Transaksi Penjualan** | `CartService.addToCart()` / `MainController` | ![Keranjang](c:\Users\sri61\Downloads\keranjang.jpeg) |
-| **FR** | **FR-3 Metode Pembayaran** | `PaymentStrategy` (Interface) $\rightarrow$ `Cash`, `EWallet` | ![Payment](c:\Users\sri61\Downloads\cash.jpeg) (c:\Users\sri61\Downloads\e-wallet.jpeg) |
-| **FR** | **FR-4 Struk & Laporan** | `ReceiptService` / `TransactionRepository.getIncome()` | ![Struk](c:\Users\sri61\Downloads\struk_cash.jpeg) (c:\Users\sri61\Downloads\struk_ewallet.jpeg) |
-| **FR** | **FR-5 Login & Role** | `AuthService.login()` / `MainController.applyRoleAccess()` | ![Role](c:\Users\sri61\Downloads\login.jpeg) |
+| **FR** | **FR-1 Manajemen Produk** | `ProductController` / `SqlProductRepository.save()` | ![CRUD](dilampirkan di folder screenshot) |
+| **FR** | **FR-2 Transaksi Penjualan** | `CartService.addToCart()` / `MainController` | ![Keranjang](dilampirkan di folder screenshot) |
+| **FR** | **FR-3 Metode Pembayaran** | `PaymentStrategy` (Interface) $\rightarrow$ `Cash`, `EWallet` | ![Payment](dilampirkan di folder screenshot) |
+| **FR** | **FR-4 Struk & Laporan** | `ReceiptService` / `TransactionRepository.getIncome()` | ![Struk](dilampirkan di folder screenshot)  |
+| **FR** | **FR-5 Login & Role** | `AuthService.login()` / `MainController.applyRoleAccess()` | ![Role](dilampirkan di folder screenshot) |
 | **SD** | **SD-Checkout** |  'Controller' 'Service'  'DAO' | *(Lihat Diagram di Bab 3)* |
-| **FR (Ops)** | **OFR-1 Diskon Member** | `CartService` (Logic 10%) / `SqlMemberRepository` | ![Diskon](c:\Users\sri61\Downloads\diskon.jpeg) |
+| **FR (Ops)** | **OFR-1 Diskon Member** | `CartService` (Logic 10%) / `SqlMemberRepository` | ![Diskon](dilampirkan di folder screenshot) |
 
 ---
 
@@ -89,7 +89,7 @@ Pengujian White-box dilakukan pada logika bisnis `CartService` dan `Diskon`.
 * **Coverage:** Perhitungan Total, Penambahan Qty, Logika Diskon.
 
 **Screenshot Hasil JUnit:**
-![JUnit Result](c:\Users\sri61\Downloads\junit tes.jpeg)
+![JUnit Result](dilampirkan di folder screenshot)
 
 ---
 
